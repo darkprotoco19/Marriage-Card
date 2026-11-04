@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Edit toggle -->
+<div class="toolbar">
+  <button id="editToggle" type="button">✎ Edit Card</button>
+  <button id="resetBtn" type="button" class="ghost">Reset</button>
+</div>
+<p class="edit-hint" id="editHint">Edit mode ON: text par click kar ke naam/tarikh badlein, photo par "Upload" dabayein.</p>
+
+<!-- PAGE 1 : COVER -->
+<section class="page cover" id="cover">
+  <div class="photo bg" data-key="cover">
+    <img alt="">
+    <label class="upload">📷 Upload Couple Photo<input type="file" accept="image/*" hidden></label>
+  </div>
+  <div class="overlay"></div>
+  <div class="cover-content reveal">
+    <div class="bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <p class="small-caps" data-edit="cover-line">Together with their families</p>
+    <h1 class="names script">
+      <span data-edit="groom-name-cover">Ahmed</span>
+      <span class="amp">&amp;</span>
+      <span data-edit="bride-name-cover">Ayesha</span>
+    </h1>
+    <p class="small-caps" data-edit="cover-date">Request the pleasure of your company · 20 December 2026</p>
+    <a href="#couple" class="scroll-down">↓</a>
+  </div>
+</section>
+
+<!-- PAGE 2 : GROOM & BRIDE -->
+<section class="page couple" id="couple">
+  <h2 class="section-title script reveal">The Bride &amp; Groom</h2>
+  <div class="frames">
+    <article class="frame reveal">
+      <div class="photo arch" data-key="groom">
+        <img alt="">
+        <label class="upload">📷 Upload Groom<input type="file" accept="image/*" hidden></label>
+      </div>
+      <h3 class="script" data-edit="groom-name">Ahmed Khan</h3>
+      <p class="role">The Groom</p>
+      <p class="desc" data-edit="groom-desc">Son of Mr. &amp; Mrs. Khan</p>
+    </article>
+    <article class="frame reveal">
+      <div class="photo arch" data-key="bride">
+        <img alt="">
+        <label class="upload">📷 Upload Bride<input type="file" accept="image/*" hidden></label>
+      </div>
+      <h3 class="script" data-edit="bride-name">Ayesha Malik</h3>
+      <p class="role">The Bride</p>
+      <p class="desc" data-edit="bride-desc">Daughter of Mr. &amp; Mrs. Malik</p>
+    </article>
+  </div>
+</section>
+
+<!-- PAGE 3 : OUR STORY -->
+<section class="page story" id="story">
+  <h2 class="section-title script reveal">Our Moments</h2>
+  <div class="story-frame reveal">
+    <div class="collage">
+      <div class="photo c1" data-key="s1"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c2" data-key="s2"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c3" data-key="s3"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c4" data-key="s4"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c5" data-key="s5"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c6" data-key="s6"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+      <div class="photo c7" data-key="s7"><img alt=""><label class="upload">📷<input type="file" accept="image/*" hidden></label></div>
+    </div>
+    <p class="story-text" data-edit="story-text">Do dilon ki ek khoobsurat kahani, jo dosti se shuru hui aur muhabbat par mukammal hui. Ab hum apni zindagi ka naya safar Allah ke naam se shuru kar rahe hain, aur is khushi mein aap ki dua aur mojoodgi chahte hain.</p>
+  </div>
+</section>
+
+<!-- PAGE 4 : PARENTS BLESSING -->
+<section class="page blessing" id="blessing">
+  <div class="blessing-box reveal">
+    <div class="ornament">❖</div>
+    <h2 class="script">Blessings of our Beloved Parents</h2>
+    <div class="parents">
+      <div>
+        <h4>Groom's Parents</h4>
+        <p data-edit="gparents">Mr. &amp; Mrs. Khan</p>
+      </div>
+      <div>
+        <h4>Bride's Parents</h4>
+        <p data-edit="bparents">Mr. &amp; Mrs. Malik</p>
+      </div>
+    </div>
+    <p class="dua">"Allah aap dono ko khushiyon, sukoon aur barkat bhari zindagi ata farmaye. Ameen."</p>
+    <div class="ornament">❖</div>
+  </div>
+</section>
+
+<!-- PAGE 5 : EVENTS -->
+<section class="page events" id="events">
+  <h2 class="section-title script reveal">Wedding Events</h2>
+
+  <!-- Mehndi : image bottom right -->
+  <article class="event right reveal">
+    <div class="event-text">
+      <h3 class="script">Mehndi</h3>
+      <p class="ev-date" data-edit="mehndi-date">Friday, 18 December 2026</p>
+      <p class="ev-time" data-edit="mehndi-time">Time: 7:00 PM onwards</p>
+    </div>
+    <div class="photo round" data-key="ev-mehndi"><img alt=""><label class="upload">📷 Mehndi<input type="file" accept="image/*" hidden></label></div>
+  </article>
+
+  <!-- Nikah & Barat : image bottom left -->
+  <article class="event left reveal">
+    <div class="event-text">
+      <h3 class="script">Nikah &amp; Barat</h3>
+      <p class="ev-date" data-edit="nikah-date">Sunday, 20 December 2026</p>
+      <p class="ev-time" data-edit="nikah-time">Nikah: 2:00 PM · Barat: 7:00 PM</p>
+    </div>
+    <div class="photo round" data-key="ev-nikah"><img alt=""><label class="upload">📷 Nikah / Barat<input type="file" accept="image/*" hidden></label></div>
+  </article>
+
+  <!-- Walima : image bottom right -->
+  <article class="event right reveal">
+    <div class="event-text">
+      <h3 class="script">Walima</h3>
+      <p class="ev-date" data-edit="walima-date">Monday, 21 December 2026</p>
+      <p class="ev-time" data-edit="walima-time">Time: 1:00 PM · Lunch to follow</p>
+    </div>
+    <div class="photo round" data-key="ev-walima"><img alt=""><label class="upload">📷 Walima<input type="file" accept="image/*" hidden></label></div>
+  </article>
+</section>
+
+<!-- PAGE 6 : VENUE -->
+<section class="page venue" id="venue">
+  <h2 class="section-title script reveal">Venue &amp; Directions</h2>
+  <div class="venue-card reveal">
+    <h3 data-edit="venue-name">Grand Royal Marquee</h3>
+    <p data-edit="venue-address" id="venueAddress">Main Boulevard, Gulberg, Lahore, Pakistan</p>
+    <div class="map-wrap">
+      <iframe id="mapFrame" title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="map-actions">
+      <a id="dirBtn" class="btn" target="_blank" rel="noopener">📍 Get Directions</a>
+      <button type="button" id="updateMap" class="btn ghost edit-only">Update Map from Address</button>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 7 : RSVP -->
+<section class="page rsvp" id="rsvp">
+  <h2 class="section-title script reveal">Confirm Your Presence</h2>
+  <form id="rsvpForm" class="rsvp-form reveal" novalidate>
+    <label>Full Name
+      <input type="text" name="name" placeholder="Aap ka poora naam" required>
+    </label>
+    <label>Number of Guests Attending
+      <input type="number" name="guests" min="1" max="20" value="1" required>
+    </label>
+    <label>Short Message
+      <textarea name="message" rows="4" placeholder="Dulha dulhan ke liye dua ya paighaam..."></textarea>
+    </label>
+    <button type="submit" class="btn">Confirm Attendance</button>
+    <p class="form-msg" id="formMsg" role="status"></p>
+  </form>
+  <footer class="foot">
+    <div class="bismillah small">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <p class="script" data-edit="foot-names">Ahmed &amp; Ayesha</p>
+  </footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
